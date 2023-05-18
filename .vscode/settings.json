@@ -1,0 +1,12 @@
+{
+    "rust-analyzer.linkedProjects": [
+        "./Cargo.toml"
+    ],
+    "cSpell.words": [
+        "CAPSL",
+        "evdev",
+        "SCROLLL",
+        "ungrab",
+        "Ungrabbed"
+    ],
+}
