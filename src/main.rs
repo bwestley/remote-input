@@ -320,8 +320,15 @@ fn main() {
         "[Main] Loading configuration file \"{}\".",
         config_file_path.display()
     );
-    let config_data =
-        fs::read_to_string(config_file_path).expect("unable to read configuration file");
+    let config_data = match fs::read_to_string(&config_file_path) {
+        Ok(data) => data,
+        Err(error) => {
+            println!("[Main] Unable to read configuration file: {error}.\nInstalling default.");
+            let _ = fs::write(&config_file_path, include_str!("default_config.toml"));
+            panic!();
+        }
+    };
+
     let config: Config =
         toml::from_str(&config_data).expect("unable to deserialize configuration file");
 

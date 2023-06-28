@@ -1,0 +1,18 @@
+[hardware]
+# The name of the keyboard device as reported by evdev:
+name = "Logitech USB Keyboard"
+# The status light blink duration in milliseconds
+led_speed_millis = 3000
+# See https://github.com/torvalds/linux/blob/master/include/uapi/linux/
+# input-event-codes.h for key names.
+# The escape key will ungrab and grab the input device.
+escape = "KEY_SCROLLLOCK"
+# The pause key will pause and unpause event transmission.
+pause = "KEY_PAUSE"
+
+[server]
+# The bind address for the remote input server:
+address = "0.0.0.0:8650"
+# The api key (terminated by a zero byte) must be sent by
+# the client when the connection is established.
+api_key = "d4AXBDqWa0PQgsGVc4oKnguYA4jEfu5EM7ztD7to"

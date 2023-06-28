@@ -3,9 +3,14 @@
         "./Cargo.toml"
     ],
     "cSpell.words": [
+        "bwestley",
         "CAPSL",
         "evdev",
+        "millis",
+        "nsec",
         "SCROLLL",
+        "SCROLLLOCK",
+        "struct",
         "ungrab",
         "Ungrabbed"
     ],
